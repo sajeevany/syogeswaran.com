@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<title>SYogeswaran</title>
+
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+
+    {% load staticfiles %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "main.css" %}">
+</head>
+
+
+
+<body class="body" style="background-color:#f6f6f6">
+
+<div id="wrapper">
+    <div class="contentWrapper">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'syogesweb:home' %}">SY</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">APPS<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'tesseractboxeditor:tbe' %}">TesseractBoxEditor</a></li>
+                                <li><a href="#">ANPR</a></li>
+                                <hr>
+                                <li><a href="{% url 'syogesweb:apps' %}">Apps Menu</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="{% url 'syogesweb:contact' %}">CONTACT</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Extras</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {# Jumbotron block is optional. Used only by home.html page #}
+        {% block jumbotronHome %}
+
+        {% endblock %}
+
+        <div class="container">
+            <div class="main">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="footer" class="text-center">
+        <div class="container">
+            <hr>
+            <ul class="list-inline">
+                <a href="https://ca.linkedin.com/in/sajeevan-yogeswaran-434516a4" data-show-count="false">
+                    <img src="{% static 'syogesweb/images/In-Black-21px-TM.png'  %}" class="footer-social-item">
+                </a>
+                <a href="https://github.com/sajeevany/" data-show-count="false">
+                    <img src="{% static 'syogesweb/images/GitHub-Mark-32px.png' %}" class="footer-social-item">
+                </a>
+            </ul>
+            <p>Sajeevan Yogeswaran, &copy; 2016</p>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
