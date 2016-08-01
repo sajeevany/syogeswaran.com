@@ -7,7 +7,9 @@
             <h3>{{ title }}</h3>
             <p> {{ desc }}</p>
             <ul class="list-inline">
-                <li><a href="{{ appRef }}">See TBE</a></li>
+                {% if appRef %}
+                    <li><a href="{{ appRef }}">Live</a></li>
+                {% endif %}
                 <li><a href="{{ srcRef }}">See source</a></li>
             </ul>
         </span>
