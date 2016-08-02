@@ -18,6 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^apps/tbe/', include('TesseractBoxEditor.urls')),
     url(r'^', include('syogesweb.urls')),
-    url(r'^apps/tbe/', include('tesseractboxeditor.urls')),
 ]
