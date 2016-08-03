@@ -22,5 +22,6 @@ app_name = 'syogesweb'
 urlpatterns = [
     url(r'^apps/$', syogesweb.views.apps, name='apps'),
     url(r'^contact/', syogesweb.views.contact, name='contact'),
+    url(r'^about/', syogesweb.views.about, name='about'),
     url(r'^.*', syogesweb.views.home, name='home'),
 ]

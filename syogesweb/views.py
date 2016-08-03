@@ -8,9 +8,12 @@ def home(request):
 
 
 def apps(request):
-    return render_to_response('syogesweb/apps.html', context_instance=RequestContext(request));
+    return render_to_response('syogesweb/appsMenu.html', context_instance=RequestContext(request));
 
 
 def contact(request):
     return render_to_response('syogesweb/contact.html', context_instance=RequestContext(request));
 
+
+def about(request):
+    return render_to_response('syogesweb/about.html', context_instance=RequestContext(request));
