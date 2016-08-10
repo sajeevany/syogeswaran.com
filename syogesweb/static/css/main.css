@@ -27,3 +27,7 @@ body {
    height:100px;   /* Height of the footer */
    background:transparent;
 }
+
+.table-borderless tr td{
+   border: none;
+}
