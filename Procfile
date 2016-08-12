@@ -1,1 +1,1 @@
-web: gunicorn syogeswaran.wsgi
+web: python manage.py collectstatic --noinput; gunicorn syogeswaran.wsgi

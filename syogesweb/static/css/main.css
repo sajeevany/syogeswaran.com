@@ -2,11 +2,19 @@
     width: 21px !important;
     height: 21px !important;
 }
-html,
-body {
+html{
    margin:0;
    padding:0;
    height:100%;
+}
+body {
+   margin:0;
+   padding-top:65px;
+   padding-left: 0px;
+   padding-right: 0px;
+   padding-bottom: 0px;
+   height:100%;
+   font-family: "Open Sans", sans-serif; !important;
 }
 #wrapper{
    min-height:100%;
