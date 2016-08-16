@@ -26,55 +26,52 @@
 <body class="body" style="background-color:#f6f6f6">
 
 <div id="wrapper">
-    <div class="contentWrapper">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{% url 'syogesweb:home' %}">SY</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">APPS<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{% url 'TesseractBoxEditor:tbe' %}">TesseractBoxEditor</a></li>
-                                <li><a href="#">ANPR</a></li>
-                                <hr>
-                                <li><a href="{% url 'syogesweb:apps' %}">Apps Menu</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#blog">BLOG</a></li>
-                        <li><a href="{% url 'syogesweb:about' %}">ABOUT</a></li>
-                        <li><a href="{% url 'syogesweb:contact' %}">CONTACT</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Login</a></li>
-                                <li><a href="#">Extras</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                </button>
+                <a class="navbar-brand" href="{% url 'syogesweb:home' %}">SY</a>
             </div>
-        </nav>
-
-        {# Jumbotron block is optional. Used only by home.html page #}
-        {% block jumbotronHome %}
-
-        {% endblock %}
-
-        <div class="container">
-            <div class="main">
-                {% block content %}
-                {% endblock %}
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                     <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">APPS<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'TesseractBoxEditor:tbe' %}">TesseractBoxEditor</a></li>
+                            <li><a href="https://github.com/sajeevany/ANPR_EDP_Capstone_Ryerson">ANPR</a></li>
+                            <hr>
+                            <li><a href="{% url 'syogesweb:apps' %}">Apps Menu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'syogesweb:about' %}">ABOUT</a></li>
+                    <li><a href="{% url 'syogesweb:contact' %}">CONTACT</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#Extras">Extras</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+
+    </nav>
+
+    {# Jumbotron block is optional. Used only by home.html page #}
+    {% block jumbotronHome %}
+
+    {% endblock %}
+
+    <div class="container">
+        <div class="main">
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
+
 
     <div id="footer" class="text-center">
         <div class="container">
