@@ -48,3 +48,8 @@ body {
 .jumbotron-message{
    font-size: 1.25em;
 }
+
+.menu-cursor{
+   cursor: hand;
+   cursor: pointer;
+}
