@@ -23,72 +23,67 @@
 
 
 
-<body class="body" style="background-color:#f6f6f6">
-
-<div id="wrapper">
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{% url 'syogesweb:home' %}">SY</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                     <li class="dropdown menu-cursor">
-                        <a class="dropdown-toggle" data-toggle="dropdown">APPS<span class="caret" style="cursor:default"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'TesseractBoxEditor:tbe' %}">TesseractBoxEditor</a></li>
-                            <li><a href="https://github.com/sajeevany/ANPR_EDP_Capstone_Ryerson">ANPR</a></li>
-                            <hr>
-                            <li><a href="{% url 'syogesweb:apps' %}">Apps Menu</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-cursor"><a href="{% url 'syogesweb:about' %}">ABOUT</a></li>
-                    <li class="menu-cursor"><a href="{% url 'syogesweb:contact' %}">CONTACT</a></li>
-                    <li class="dropdown menu-cursor">
-                        <a class="dropdown-toggle" data-toggle="dropdown">MORE<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#Extras">Extras</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<body class="body" style="background-color:white">
+    <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'syogesweb:home' %}">SY</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                 <li class="dropdown menu-cursor">
+                    <a class="dropdown-toggle" data-toggle="dropdown">APPS<span class="caret" style="cursor:default"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'TesseractBoxEditor:tbe' %}">TesseractBoxEditor</a></li>
+                        <li><a href="https://github.com/sajeevany/ANPR_EDP_Capstone_Ryerson">ANPR</a></li>
+                        <hr>
+                        <li><a href="{% url 'syogesweb:apps' %}">Apps Menu</a></li>
+                    </ul>
+                </li>
+                <li class="menu-cursor"><a href="{% url 'syogesweb:about' %}">ABOUT</a></li>
+                <li class="menu-cursor"><a href="{% url 'syogesweb:contact' %}">CONTACT</a></li>
+                <li class="dropdown menu-cursor">
+                    <a class="dropdown-toggle" data-toggle="dropdown">MORE<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Extras">Extras</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
     </nav>
 
-    {# Jumbotron block is optional. Used only by home.html page #}
-    {% block jumbotronHome %}
-
-    {% endblock %}
-
-    <div class="container">
+    <div class="wrapper">
         <div class="main">
+
+            {# Jumbotron block is optional. Used only by home.html page #}
+            {% block jumbotronHome %}
+            {% endblock %}
+
             {% block content %}
             {% endblock %}
+
         </div>
-    </div>
-
-
-    <div id="footer" class="text-center">
-        <div class="container">
-            <hr>
-            <ul class="list-inline">
-                <a href="https://ca.linkedin.com/in/sajeevany" target="_blank" data-show-count="false">
-                    <img src="{% static 'syogesweb/images/In-Black-21px-TM.png'  %}" class="footer-social-item">
-                </a>
-                <a href="https://github.com/sajeevany/" target="_blank" data-show-count="false">
-                    <img src="{% static 'syogesweb/images/GitHub-Mark-32px.png' %}" class="footer-social-item">
-                </a>
-            </ul>
-            <p>Sajeevan Yogeswaran, &copy; 2016</p>
-        </div>
-    </div>
 
     </div>
+
+    <footer class="footer-i text-center">
+        <hr>
+        <ul class="list-inline">
+            <a href="https://ca.linkedin.com/in/sajeevany" target="_blank" data-show-count="false">
+                <img src="{% static 'syogesweb/images/In-Black-21px-TM.png'  %}" class="footer-social-item">
+            </a>
+            <a href="https://github.com/sajeevany/" target="_blank" data-show-count="false">
+                <img src="{% static 'syogesweb/images/GitHub-Mark-32px.png' %}" class="footer-social-item">
+            </a>
+        </ul>
+        <p>Sajeevan Yogeswaran, &copy; 2016</p>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
